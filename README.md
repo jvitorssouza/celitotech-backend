@@ -55,18 +55,18 @@ Welcome to the User Management API! This API provides functionality for user reg
 
 #### Authentication
 
-- **POST /signup**: Registers a new user.
-- **POST /login**: Authenticates a user with email and password.
-- **GET /me**: Returns data for the authenticated user.
+- **POST /auth/signup**: Registers a new user.
+- **POST /auth/login**: Authenticates a user with email and password.
+- **GET /auth/me**: Returns data for the authenticated user.
 
 #### Users
 
-- **PATCH /users/me/password**: Allows a regular user to change their password.
-- **PATCH /users/me**: Allows a regular user to update their own data.
-- **POST /users**: (Admin) Creates a new user.
-- **PATCH /users/:id**: (Admin) Updates data for a specific user.
-- **DELETE /users/:id**: (Admin) Deletes a specific user.
 - **GET /users**: (Admin) Lists all users.
+- **GET /users/:id**: (Admin) Lists user by ID.
+- **POST /users**: (Admin) Creates a new user.
+- **PATCH /users/:id**: (Admin, User) Updates data for a specific user.
+- **PATCH /users/update-password**: Allows a regular user to change their password.
+- **DELETE /users/:id**: (Admin) Deletes a specific user.
 
 ### Security
 
